@@ -160,7 +160,7 @@ class RelayListenerXboxLogin(val accessToken: () -> String, val deviceInfo: Xbox
             val jwt = signJWT(AbstractConfigManager.DEFAULT_GSON.toJson(JsonObject().apply {
 				addProperty("certificateAuthority", true)
 				addProperty("exp", (Instant.now().epochSecond + TimeUnit.HOURS.toSeconds(6)).toInt())
-				addProperty("nbf", 1692128678)
+				addProperty("nbf", 1692474283)
 				addProperty("identityPublicKey", identityPubKey.get("x5u").asString)
 			}), keyPair)
 
